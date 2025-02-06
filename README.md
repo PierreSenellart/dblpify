@@ -12,7 +12,9 @@ This is a Python 3 script that depends on one external library: [bibtexparser](h
 
 ## Usage
 
+```bash
 python3 dblpify.py < input.bib > output.bib
+```
 
 ## License
 
