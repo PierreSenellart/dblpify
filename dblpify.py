@@ -30,6 +30,7 @@ def process_content(content):
             title = clean_string(e['title'])
             if 'author' not in e:
                 print("Author missing for title “%s”"%(title), sys.stderr)
+                print(content)
                 continue
             ln = extract_last_names(e['author'])
             query = title + ' ' + ' '.join(ln)
