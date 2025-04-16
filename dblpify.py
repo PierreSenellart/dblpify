@@ -4,6 +4,7 @@ import bibtexparser
 import json
 import re
 import requests
+import sys
 import urllib.parse
 
 def clean_string(s):
@@ -27,6 +28,9 @@ def process_content(content):
             id=re.sub('^DBLP:', '', original_id)
         else:
             title = clean_string(e['title'])
+            if 'author' not in e:
+                print("Author missing for title “%s”"%(title), sys.stderr)
+                continue
             ln = extract_last_names(e['author'])
             query = title + ' ' + ' '.join(ln)
             response = requests.get('https://dblp.org/search/publ/api?q='+urllib.parse.quote_plus(query)+'&h=1&format=json')
