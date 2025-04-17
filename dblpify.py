@@ -29,7 +29,7 @@ def process_content(content):
         else:
             title = clean_string(e['title'])
             if 'author' not in e:
-                print("Author missing for title “%s”"%(title), sys.stderr)
+                print("Author missing for title “%s”"%(title), file=sys.stderr)
                 print(content)
                 continue
             ln = extract_last_names(e['author'])
@@ -59,4 +59,3 @@ with open('/dev/stdin') as input:
             content=''
         content+=line
     process_content(content)
-
