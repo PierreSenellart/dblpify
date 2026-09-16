@@ -22,7 +22,7 @@ dblpify is provided as open-source software under the MIT License. See [LICENSE]
 
 ## Contact
 
-<https://github.com/PierreSenellart/provsql>
+<https://github.com/PierreSenellart/dblpify>
 
 Pierre Senellart <pierre@senellart.com>
 
